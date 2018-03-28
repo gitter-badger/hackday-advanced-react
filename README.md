@@ -1,5 +1,7 @@
 # Hackday Advanced React
 
+[![Join the chat at https://gitter.im/hackday-advanced-react/Lobby](https://badges.gitter.im/hackday-advanced-react/Lobby.svg)](https://gitter.im/hackday-advanced-react/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## Program
 
 ### Advanced React Patterns
