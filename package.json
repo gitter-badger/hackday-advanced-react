@@ -1,0 +1,62 @@
+{
+  "name": "exercises",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bulma": "^0.6.2",
+    "classnames": "^2.2.5",
+    "critical": "^1.1.1",
+    "express": "^4.16.2",
+    "lodash": "^4.17.5",
+    "luxon": "^0.5.6",
+    "react": "^16.2.0",
+    "react-dom": "^16.3.0-alpha.1",
+    "react-lazyload": "^2.3.0",
+    "react-loadable": "^5.3.1",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.0",
+    "redux": "^3.7.2",
+    "redux-form": "^7.3.0",
+    "slug": "^0.9.1",
+    "styled-components": "^3.2.0",
+    "victory": "^0.25.6"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "build:critical": "yarn build && node critical.js",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-scripts eject",
+    "serve": "live-server build",
+    "format": "prettier --write 'src/**/*.js'",
+    "precommit": "lint-staged",
+    "server:slow":
+      "json-server src/assets/movies.json --middlewares server/middlewares/randomEmpty.js --delay 2000 --port 5000",
+    "server": "json-server src/assets/movies.json --port 5000"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write --single-quote --bracket-spacing=false",
+      "git add"
+    ],
+    "*.{css,scss,json,md}": ["prettier --write", "git add"]
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>src/testing/setupTest.js"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint-plugin-react": "^7.7.0",
+    "husky": "^0.14.3",
+    "json-server": "^0.12.1",
+    "lint-staged": "^6.0.1",
+    "live-server": "^1.2.0",
+    "prettier": "^1.10.2",
+    "react-app-rewired": "^1.4.1",
+    "source-map-explorer": "^1.5.0"
+  }
+}
